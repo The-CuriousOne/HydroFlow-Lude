@@ -29,6 +29,10 @@
     align-items: center;
 }
 
+.leftComponent h3{
+    font-weight: 400;
+}
+
 .rightComponent{
     width: 50%;
     display: flex;
@@ -106,7 +110,7 @@
     height: 4rem;
     display: flex;
     flex-direction: row-reverse;
-    border-bottom: #FBF8EF solid 1px;
+    border-bottom: rgba(251, 248, 239, 0.4) solid 1px;
 }
 
 .navbarMobileMenu li a{

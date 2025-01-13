@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Test from "./pages/Test";
 import { useState, useEffect, useCallback } from "react";
+import Footer from "./components/Footer";
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -56,6 +57,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/test" element={<Test />} />
       </Routes>
+      <Footer/>
     </div>
   );
 }
