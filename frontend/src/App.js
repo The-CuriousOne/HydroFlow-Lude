@@ -53,10 +53,12 @@ function App() {
   return (
     <div className="App">
       <Navbar show={showNavbar} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/test" element={<Test />} />
-      </Routes>
+      <div className="appDisplay">
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="" element={<Test/>}/>
+        </Routes>
+      </div>
       <Footer/>
     </div>
   );
