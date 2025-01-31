@@ -1,8 +1,9 @@
 .plantInfoCard{
-    width: 23rem;
-    height: 32rem;
+    width: 25rem;
+    height: 35rem;
     border-radius: 2rem;
     transition: all 0.5s ease-in-out;
+    box-shadow: 12px 12px 0px rgba(255, 255, 255, 0.1);
 }
 
 .plantPic{
@@ -37,6 +38,9 @@
     box-sizing: border-box;
 }
 
+.nutrient{
+    padding: 0.25rem 0rem;
+}
 .nutrientLevel{
     font-size: 18px;
     font-weight: 400;
