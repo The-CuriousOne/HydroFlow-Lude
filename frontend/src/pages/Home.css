@@ -1,5 +1,350 @@
 .Home{
+    width: 100%;
     max-width: 100vw;
-    height: 500px;
     box-sizing: border-box;
+}
+
+.welcomeSection{
+    width: 100%;
+    height: 50rem;
+    box-sizing: border-box;
+    background: url('../../public/images/about/welcome.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    color: #ffffff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.welcomeSection .welcomeText{
+    width: 50rem;
+    box-sizing: border-box;
+    padding: 5rem 2.5rem;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcomeSection .welcomeText h2{
+    font-weight: 400;
+    font-size: 54px;
+    align-self: center;
+    transition: all 0.5s ease-in-out;
+    margin-bottom: 1rem;
+}
+
+.welcomeSection .welcomeText h3{
+    font-weight: 300;
+    font-size: 28px;
+    transition: all 0.5s ease-in-out;
+}
+
+.welcomeSection .welcomeText p{
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.welcomeSection .welcomeText p span{
+    transition: all 0.5s ease-in-out;
+}
+
+@media(max-width: 900px){
+    .welcomeSection .welcomeText{
+        width: 45rem;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+@media(max-width: 800px){
+    .welcomeSection .welcomeText{
+        width: 40rem;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+@media(max-width: 650px){
+    .welcomeSection .welcomeText{
+        width: 35rem;
+        padding: 4rem 2rem;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .welcomeSection .welcomeText h3{
+        font-size: 26px;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .welcomeSection .welcomeText h2{
+        font-size: 45px;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .welcomeSection .welcomeText p span{
+        display: none;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+.aboutSection{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.aboutSubSection{
+    width: 100%;
+    height: 50rem;
+    box-sizing: border-box;
+    display: flex;
+}
+
+#aS1{
+    flex-direction: row;
+    transition: all 0.5s ease-in-out;
+}
+
+#aS2{
+    flex-direction: row-reverse;
+    transition: all 0.5s ease-in-out;
+}
+
+#aS3{
+    flex-direction: row;
+    transition: all 0.5s ease-in-out;
+}
+
+.aboutSubSectionText{
+    background: #FBF8EF;
+    height: 100%;
+    width: 40rem;
+    box-sizing: border-box;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+#aS2 .aboutSubSectionText{
+    align-items: flex-end;
+}
+
+.aboutSubSectionText h2{
+    font-size: 42px;
+    font-weight: 400;
+}
+
+.aboutSubSectionText p{
+    font-size: 20px;
+    font-weight: 300;
+    padding: 2rem;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    transition: all 0.5s ease-in-out;
+}
+
+.aboutSubSectionText p span{
+    font-weight: 400;
+}
+
+#aS2 .aboutSubSectionText h2{
+    text-align: end;
+}
+
+.aboutSubSectionPic{
+    width: 60%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+#aSSP1{
+    background: url('../../public/images/about/Hydroponics.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#aSSP2{
+    background: url('../../public/images/about/Farming_with_IoT.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#aSSP3{
+    background: url('../../public/images/about/Sustainable_&_Automated_Growth.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media(max-width: 1000px){
+    #aS1{
+        background: url('../../public/images/about/Hydroponics.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        transition: all 0.5s ease-in-out;
+    }
+
+    #aS2{
+        background: url('../../public/images/about/Farming_with_IoT.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        transition: all 0.5s ease-in-out;
+    }
+
+    #aS3{
+        background: url('../../public/images/about/Sustainable_&_Automated_Growth.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .aboutSubSectionText{
+        width: 35rem;
+        height: fit-content;
+        margin: 5rem;
+        background: rgba(255, 255, 255, 0.775);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .aboutSubSectionPic{
+        display: none;
+        transition: all 0.5s ease-in-out;
+    }
+
+}
+
+@media(max-width: 650px){
+    .aboutSubSectionText{
+        margin: 4rem 3rem;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+@media(max-width: 400px){
+    .aboutSubSectionText{
+        margin: 3rem 2rem;
+        padding: 3rem 2rem;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .aboutSubSectionText p{
+        padding: 2rem 0rem;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+.plantInfoSection{
+    width: 100%;
+    min-height: 60rem;
+    height: auto;
+    padding: 2.55rem;
+    color: #ffffff;
+    box-sizing: border-box;
+    background: url('../../public/images/about/plantInfo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.plantInfoText{
+    width: 70rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2.5rem;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+}
+
+.plantInfoText h2{
+    font-weight: 400;
+    font-size: 42px;
+}
+
+.plantInfoText p{
+    margin: 2rem 0rem;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.plantInfoCards{
+    padding: 1rem;
+    width: 70rem;
+    margin-bottom: 5rem;
+    height: max-content;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    transition: all 0.5s ease-in-out;
+}
+
+@media(max-width: 1200px){
+    .plantInfoText{
+        width: 60rem;
+    }
+    .plantInfoCards{
+        width: 60rem;
+    }
+}
+
+@media(max-width: 1100px){
+    .plantInfoText{
+        width: 50rem;
+        transition: all 0.5s ease-in-out;
+    }
+    .plantInfoCards{
+        width: 50rem;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+@media(max-width: 950px){
+    .plantInfoText{
+        width: 40rem;
+        transition: all 0.5s ease-in-out;
+    }
+    .plantInfoCards{
+        width: 40rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 3.5rem;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+@media(max-width: 800px){
+    .plantInfoText{
+        width: 30rem;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .plantInfoCards{
+        width: 30rem;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+@media(max-width: 650px){
+    .plantInfoText{
+        width: 25rem;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .plantInfoCards{
+        width: 25rem;
+        transition: all 0.5s ease-in-out;
+    }
 }

@@ -1,0 +1,69 @@
+.plantInfoCard{
+    width: 23rem;
+    height: 32rem;
+    border-radius: 2rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.plantPic{
+    width: 100%;
+    height: 70%;
+    background: url('../../public/images/about/plantPic.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.plantName{
+    padding: 1rem;
+    font-size: 20px;
+    font-weight: 400;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.nutrientLevels{
+    width: 100%;
+    height: 30%;
+    padding: 1rem 2rem;
+    background: #FBF8EF;
+    color: #000;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    box-sizing: border-box;
+}
+
+.nutrientLevel{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.nutrientLevel span{
+    font-weight: 300;
+}
+
+.progressBar {
+    width: 100%;
+    height: 0.4rem;
+    background: #ddd;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.progressFill {
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+}
+
+@media(max-width: 500px){
+    .plantInfoCard{
+        width: 21rem;
+        transition: all 0.5s ease-in-out;
+    }
+}

@@ -34,7 +34,11 @@ function App() {
   // Memoize the handleScroll function to avoid unnecessary re-renders
   const handleScroll = useCallback(() => {
     const currentScrollY = window.scrollY;
-    if (currentScrollY > lastScrollY) {
+    const scrollThreshold = 5 * parseFloat(getComputedStyle(document.documentElement).fontSize); // Convert 5rem to px
+
+    if (currentScrollY < scrollThreshold) {
+      setShowNavbar(true); // Always show the navbar within the first 5rem
+    } else if (currentScrollY > lastScrollY) {
       setShowNavbar(false); // Scrolling down
     } else {
       setShowNavbar(true); // Scrolling up
@@ -55,11 +59,11 @@ function App() {
       <Navbar show={showNavbar} />
       <div className="appDisplay">
         <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="" element={<Test/>}/>
+          <Route path="/" element={<Home />} />
+          <Route path="" element={<Test />} />
         </Routes>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
