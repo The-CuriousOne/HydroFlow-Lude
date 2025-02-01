@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     margin: 0;
-    padding: 1rem 1.5rem;
+    padding: 1.5rem 2.5rem;
     width: -webkit-fill-available;
     height: 5rem;
     max-width: 100%;
@@ -27,6 +27,11 @@
 .leftComponent{
     display: flex;
     align-items: center;
+}
+
+.leftComponent a{
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 .leftComponent h3{

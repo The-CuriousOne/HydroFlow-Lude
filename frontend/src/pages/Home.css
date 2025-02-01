@@ -154,6 +154,12 @@
     text-align: end;
 }
 
+.aboutSubSectionText a{
+    text-decoration: none;
+    color: #577564;
+    font-weight: 400;
+}
+
 .aboutSubSectionPic{
     width: 60%;
     height: 100%;
@@ -289,6 +295,10 @@
     display: flex;
     justify-content: space-evenly;
     transition: all 0.5s ease-in-out;
+}
+
+.plantInfoCards a{
+    text-decoration: none;
 }
 
 @media(max-width: 1200px){

@@ -20,7 +20,7 @@ const Navbar = ({ show }) => {
   return (
     <div className={`Navbar ${!show ? "hidden" : ""}`}>
       <div className="leftComponent">
-        <h3>HydroFlow Lude</h3>
+        <Link to='/'><h3>HydroFlow Lude</h3></Link>
       </div>
 
       <div className="rightComponent">
@@ -29,13 +29,13 @@ const Navbar = ({ show }) => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/test">Track</Link>
+            <Link to="/track">Track</Link>
           </li>
           <li>
-            <Link to="/test">About</Link>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/test">Contact Us</Link>
+            <Link to="/contacts">Contact Us</Link>
           </li>
           <li>
             <Link to="/test" className="userInfoListItem">

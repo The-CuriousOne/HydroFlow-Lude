@@ -1,10 +1,17 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Test from "./pages/Test";
-import { useState, useEffect, useCallback } from "react";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import { useState, useEffect, useCallback } from "react";
+import Home from './pages/Home';
+import Test from "./pages/Test";
+import About from "./pages/About";
+import Contacts from "./pages/Contacts";
+import Track from "./pages/Track";
+import License from "./pages/License";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -58,9 +65,16 @@ function App() {
     <div className="App">
       <Navbar show={showNavbar} />
       <div className="appDisplay">
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="" element={<Test />} />
+          <Route path="/test" element={<Test />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/track" element={<Track />} />
+          <Route path="/license" element={<License />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
         </Routes>
       </div>
       <Footer />
