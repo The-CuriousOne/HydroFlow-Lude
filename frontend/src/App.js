@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import { useState, useEffect, useCallback } from "react";
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Home from "./pages/Home";
 import Test from "./pages/Test";
 import About from "./pages/About";
@@ -79,6 +80,7 @@ function App() {
         </Routes>
       </div>
       <Footer />
+      <SpeedInsights />
     </div>
   );
 }
