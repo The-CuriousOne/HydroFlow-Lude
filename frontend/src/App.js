@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import { useState, useEffect, useCallback } from "react";
-import Home from './pages/Home';
+import Home from "./pages/Home";
 import Test from "./pages/Test";
 import About from "./pages/About";
 import Contacts from "./pages/Contacts";
@@ -41,7 +41,8 @@ function App() {
   // Memoize the handleScroll function to avoid unnecessary re-renders
   const handleScroll = useCallback(() => {
     const currentScrollY = window.scrollY;
-    const scrollThreshold = 5 * parseFloat(getComputedStyle(document.documentElement).fontSize); // Convert 5rem to px
+    const scrollThreshold =
+      5 * parseFloat(getComputedStyle(document.documentElement).fontSize); // Convert 5rem to px
 
     if (currentScrollY < scrollThreshold) {
       setShowNavbar(true); // Always show the navbar within the first 5rem

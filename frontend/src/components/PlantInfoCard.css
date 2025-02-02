@@ -1,4 +1,4 @@
-.plantInfoCard{
+.plantInfoCard {
     width: 25rem;
     height: 35rem;
     border-radius: 2rem;
@@ -6,7 +6,7 @@
     box-shadow: 12px 12px 0px rgba(255, 255, 255, 0.1);
 }
 
-.plantPic{
+.plantPic {
     width: 100%;
     height: 70%;
     background: url('../../public/images/about/plantPic.jpg');
@@ -20,14 +20,14 @@
     flex-direction: column-reverse;
 }
 
-.plantName{
+.plantName {
     padding: 1rem;
     font-size: 20px;
     font-weight: 400;
     background: rgba(0, 0, 0, 0.2);
 }
 
-.nutrientLevels{
+.nutrientLevels {
     width: 100%;
     height: 30%;
     padding: 1rem 2rem;
@@ -38,15 +38,16 @@
     box-sizing: border-box;
 }
 
-.nutrient{
+.nutrient {
     padding: 0.25rem 0rem;
 }
-.nutrientLevel{
+
+.nutrientLevel {
     font-size: 18px;
     font-weight: 400;
 }
 
-.nutrientLevel span{
+.nutrientLevel span {
     font-weight: 300;
 }
 
@@ -65,8 +66,8 @@
     transition: width 0.5s ease-in-out;
 }
 
-@media(max-width: 500px){
-    .plantInfoCard{
+@media(max-width: 500px) {
+    .plantInfoCard {
         width: 21rem;
         transition: all 0.5s ease-in-out;
     }

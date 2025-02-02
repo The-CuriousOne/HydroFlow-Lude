@@ -1,138 +1,137 @@
 .terms {
-    width: 100%;
-    max-width: 100vw;
-    padding: 5rem;
-    box-sizing: border-box;
-    /* Update the URL below with the correct path to your background image if needed */
-    background: url('../../public/images/license.jpg');
+  width: 100%;
+  max-width: 100vw;
+  padding: 5rem;
+  box-sizing: border-box;
+  /* Update the URL below with the correct path to your background image if needed */
+  background: url('../../public/images/license.jpg');
+}
+
+.termsAgreement {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 7rem 5rem;
+  box-sizing: border-box;
+}
+
+.termsHead {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  border-top: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.termsHead h2 {
+  align-self: center;
+  font-weight: 500;
+  font-size: 48px;
+  padding: 2.5rem 0;
+}
+
+.termsHead h3 {
+  margin: 0.25rem 0;
+  font-weight: 500;
+}
+
+.termsHead p {
+  margin: 0.25rem 0;
+  font-weight: 300;
+}
+
+.projectDetail {
+  padding: 1.5rem;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.termsContent {
+  padding: 0 2rem;
+  hyphens: auto;
+}
+
+.termsComponent {
+  padding: 2.5rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.termsComponent h3 {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.termsComponent p {
+  margin: 1rem 0;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.termsComponent ul {
+  margin: 1rem 2rem;
+  list-style: disc;
+  font-size: 18px;
+}
+
+.termsComponent ul li {
+  margin: 0.5rem 0;
+}
+
+.termsComponent blockquote {
+  margin: 1rem 0;
+  padding: 0 2rem;
+  border-left: 5px solid #122A2C;
+  border-radius: 10px;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  .terms {
+    padding: 4rem;
   }
-  
+
   .termsAgreement {
-    background: rgba(255, 255, 255, 0.75);
-    padding: 7rem 5rem;
-    box-sizing: border-box;
+    padding: 5rem 4rem;
   }
-  
-  .termsHead {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
-    border-top: 2px solid rgba(0, 0, 0, 0.5);
-  }
-  
-  .termsHead h2 {
-    align-self: center;
-    font-weight: 500;
-    font-size: 48px;
-    padding: 2.5rem 0;
-  }
-  
-  .termsHead h3 {
-    margin: 0.25rem 0;
-    font-weight: 500;
-  }
-  
-  .termsHead p {
-    margin: 0.25rem 0;
-    font-weight: 300;
-  }
-  
-  .projectDetail {
-    padding: 1.5rem;
-    font-size: 18px;
-    box-sizing: border-box;
-  }
-  
+
   .termsContent {
-    padding: 0 2rem;
-    hyphens: auto;
+    padding: 0;
   }
-  
+
   .termsComponent {
-    padding: 2.5rem;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    padding: 2.5rem 2rem;
   }
-  
-  .termsComponent h3 {
-    font-weight: 500;
-    font-size: 24px;
+}
+
+@media (max-width: 700px) {
+  .termsAgreement {
+    padding: 4rem 3rem;
   }
-  
-  .termsComponent p {
-    margin: 1rem 0;
-    font-weight: 300;
-    font-size: 18px;
+
+  .termsComponent {
+    padding: 2.5rem 1rem;
   }
-  
+}
+
+@media (max-width: 500px) {
+  .terms {
+    padding: 1rem;
+  }
+
+  .termsAgreement {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .termsHead h2 {
+    text-align: center;
+  }
+
   .termsComponent ul {
-    margin: 1rem 2rem;
-    list-style: disc;
-    font-size: 18px;
+    margin: 1rem;
   }
-  
-  .termsComponent ul li {
-    margin: 0.5rem 0;
-  }
-  
-  .termsComponent blockquote {
-    margin: 1rem 0;
-    padding: 0 2rem;
-    border-left: 5px solid #122A2C;
-    border-radius: 10px;
-  }
-  
-  .italics {
-    font-style: italic;
-  }
-  
-  .bold {
-    font-weight: 400;
-  }
-  
-  @media (max-width: 900px) {
-    .terms {
-      padding: 4rem;
-    }
-  
-    .termsAgreement {
-      padding: 5rem 4rem;
-    }
-  
-    .termsContent {
-      padding: 0;
-    }
-  
-    .termsComponent {
-      padding: 2.5rem 2rem;
-    }
-  }
-  
-  @media (max-width: 700px) {
-    .termsAgreement {
-      padding: 4rem 3rem;
-    }
-  
-    .termsComponent {
-      padding: 2.5rem 1rem;
-    }
-  }
-  
-  @media (max-width: 500px) {
-    .terms {
-      padding: 1rem;
-    }
-  
-    .termsAgreement {
-      padding: 2.5rem 1.5rem;
-    }
-  
-    .termsHead h2 {
-      text-align: center;
-    }
-  
-    .termsComponent ul {
-      margin: 1rem;
-    }
-  }
-  
+}

@@ -1,144 +1,143 @@
 .privacy {
-    width: 100%;
-    max-width: 100vw;
-    padding: 5rem;
-    box-sizing: border-box;
-    /* Update the URL below with the correct path to your background image if needed */
-    background: url('../../public/images/license.jpg');
+  width: 100%;
+  max-width: 100vw;
+  padding: 5rem;
+  box-sizing: border-box;
+  /* Update the URL below with the correct path to your background image if needed */
+  background: url('../../public/images/license.jpg');
+}
+
+.privacyAgreement {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 7rem 5rem;
+  box-sizing: border-box;
+}
+
+.privacyHead {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  border-top: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.privacyHead h2 {
+  align-self: center;
+  font-weight: 500;
+  font-size: 48px;
+  padding: 2.5rem 0;
+}
+
+.privacyHead h3 {
+  margin: 0.25rem 0;
+  font-weight: 500;
+}
+
+.privacyHead p {
+  margin: 0.25rem 0;
+  font-weight: 300;
+}
+
+.projectDetail {
+  padding: 1.5rem;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.privacyContent {
+  padding: 0 2rem;
+  hyphens: auto;
+}
+
+.privacyComponent {
+  padding: 2.5rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.privacyComponent h3 {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.privacyComponent h4 {
+  font-weight: 500;
+  font-size: 20px;
+  margin: 1rem 0;
+}
+
+.privacyComponent p {
+  margin: 1rem 0;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.privacyComponent ul {
+  margin: 1rem 2rem;
+  list-style: disc;
+  font-size: 18px;
+}
+
+.privacyComponent ul li {
+  margin: 0.5rem 0;
+}
+
+.privacyComponent blockquote {
+  margin: 1rem 0;
+  padding: 0 2rem;
+  border-left: 5px solid #122A2C;
+  border-radius: 10px;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  .privacy {
+    padding: 4rem;
   }
-  
+
   .privacyAgreement {
-    background: rgba(255, 255, 255, 0.75);
-    padding: 7rem 5rem;
-    box-sizing: border-box;
+    padding: 5rem 4rem;
   }
-  
-  .privacyHead {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
-    border-top: 2px solid rgba(0, 0, 0, 0.5);
-  }
-  
-  .privacyHead h2 {
-    align-self: center;
-    font-weight: 500;
-    font-size: 48px;
-    padding: 2.5rem 0;
-  }
-  
-  .privacyHead h3 {
-    margin: 0.25rem 0;
-    font-weight: 500;
-  }
-  
-  .privacyHead p {
-    margin: 0.25rem 0;
-    font-weight: 300;
-  }
-  
-  .projectDetail {
-    padding: 1.5rem;
-    font-size: 18px;
-    box-sizing: border-box;
-  }
-  
+
   .privacyContent {
-    padding: 0 2rem;
-    hyphens: auto;
+    padding: 0;
   }
-  
+
   .privacyComponent {
-    padding: 2.5rem;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    padding: 2.5rem 2rem;
   }
-  
-  .privacyComponent h3 {
-    font-weight: 500;
-    font-size: 24px;
+}
+
+@media (max-width: 700px) {
+  .privacyAgreement {
+    padding: 4rem 3rem;
   }
-  
-  .privacyComponent h4 {
-    font-weight: 500;
-    font-size: 20px;
-    margin: 1rem 0;
+
+  .privacyComponent {
+    padding: 2.5rem 1rem;
   }
-  
-  .privacyComponent p {
-    margin: 1rem 0;
-    font-weight: 300;
-    font-size: 18px;
+}
+
+@media (max-width: 500px) {
+  .privacy {
+    padding: 1rem;
   }
-  
+
+  .privacyAgreement {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .privacyHead h2 {
+    text-align: center;
+  }
+
   .privacyComponent ul {
-    margin: 1rem 2rem;
-    list-style: disc;
-    font-size: 18px;
+    margin: 1rem;
   }
-  
-  .privacyComponent ul li {
-    margin: 0.5rem 0;
-  }
-  
-  .privacyComponent blockquote {
-    margin: 1rem 0;
-    padding: 0 2rem;
-    border-left: 5px solid #122A2C;
-    border-radius: 10px;
-  }
-  
-  .italics {
-    font-style: italic;
-  }
-  
-  .bold {
-    font-weight: 400;
-  }
-  
-  @media (max-width: 900px) {
-    .privacy {
-      padding: 4rem;
-    }
-  
-    .privacyAgreement {
-      padding: 5rem 4rem;
-    }
-  
-    .privacyContent {
-      padding: 0;
-    }
-  
-    .privacyComponent {
-      padding: 2.5rem 2rem;
-    }
-  }
-  
-  @media (max-width: 700px) {
-    .privacyAgreement {
-      padding: 4rem 3rem;
-    }
-  
-    .privacyComponent {
-      padding: 2.5rem 1rem;
-    }
-  }
-  
-  @media (max-width: 500px) {
-    .privacy {
-      padding: 1rem;
-    }
-  
-    .privacyAgreement {
-      padding: 2.5rem 1.5rem;
-    }
-  
-    .privacyHead h2 {
-      text-align: center;
-    }
-  
-    .privacyComponent ul {
-      margin: 1rem;
-    }
-  }
-  
+}

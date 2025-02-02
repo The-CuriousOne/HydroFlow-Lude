@@ -1,4 +1,4 @@
-.Footer{
+.Footer {
     background-color: #101828;
     color: #FFFFFF;
     position: relative;
@@ -16,7 +16,7 @@
     z-index: 999;
 }
 
-.topComponent{
+.topComponent {
     width: 90%;
     height: 70%;
     display: flex;
@@ -26,7 +26,7 @@
 
 }
 
-.leftTopComponent{
+.leftTopComponent {
     width: 30%;
     height: 90%;
     display: flex;
@@ -34,43 +34,43 @@
     justify-content: space-evenly;
 }
 
-.leftTopLogo{
+.leftTopLogo {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
 }
 
-.leftTopLogo a{
+.leftTopLogo a {
     text-decoration: none;
     color: #FFFFFF;
 }
 
-.leftTopText{
+.leftTopText {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     color: #99A1AF;
 }
 
-.leftTopSocials{
+.leftTopSocials {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-.leftTopLogo h3{
+.leftTopLogo h3 {
     font-weight: 400;
     font-size: 28px;
 }
 
-.leftTopSocials img{
+.leftTopSocials img {
     width: 1.25rem;
     height: 1.25rem;
 }
 
-.rightBottomComponent{
+.rightBottomComponent {
     width: 60%;
     height: 80%;
     display: flex;
@@ -78,27 +78,27 @@
     justify-content: space-around;
 }
 
-.rightBottomComponent h4{
+.rightBottomComponent h4 {
     height: 2rem;
     font-weight: 300;
     font-size: 24px;
 }
 
-.rightBottomComponent ul{
+.rightBottomComponent ul {
     list-style: none;
     margin: 2rem 0;
 }
 
-.rightBottomComponent ul li{
+.rightBottomComponent ul li {
     height: 2rem;
 }
 
-.rightBottomComponent ul li a{
+.rightBottomComponent ul li a {
     text-decoration: none;
     color: #99A1AF;
 }
 
-.companySection{
+.companySection {
     width: 30%;
     height: 100%;
     display: flex;
@@ -106,7 +106,7 @@
     justify-content: space-evenly;
 }
 
-.legalSection{
+.legalSection {
     width: 40%;
     height: 100%;
     display: flex;
@@ -114,7 +114,7 @@
     justify-content: space-evenly;
 }
 
-.bottomComponent{
+.bottomComponent {
     border-top: rgba(153, 161, 175, 0.5) solid 1px;
     width: 90%;
     height: 30%;
@@ -124,59 +124,67 @@
     color: #99A1AF;
 }
 
-.bottomComponent h5{
+.bottomComponent h5 {
     font-weight: 300;
 }
 
-.Footer, .leftTopComponent, .leftTopSocials, .bottomComponent, .rightBottomComponent, .companySection, .legalSection, .leftTopComponent, .leftTopSocials {
+.Footer,
+.leftTopComponent,
+.leftTopSocials,
+.bottomComponent,
+.rightBottomComponent,
+.companySection,
+.legalSection,
+.leftTopComponent,
+.leftTopSocials {
     transition: all 0.5s ease-in-out;
 }
 
-@media(max-width: 1000px){
-    .Footer{
+@media(max-width: 1000px) {
+    .Footer {
         height: 35rem;
     }
 
-    .topComponent{
+    .topComponent {
         height: 25rem;
         flex-direction: column;
     }
 
-    .leftTopSocials img{
+    .leftTopSocials img {
         margin: 0.5rem 0 0 0;
     }
 
-    .bottomComponent{
+    .bottomComponent {
         height: 20%;
     }
 
-    .rightBottomComponent{
+    .rightBottomComponent {
         width: 100%;
         height: 70%;
         padding: 2rem 1rem;
         box-sizing: border-box;
     }
 
-    .rightBottomComponent .companySection{
+    .rightBottomComponent .companySection {
         transition: width 0.5s ease-in-out, align-items 0.5s ease-in-out;
         width: 50%;
         align-items: flex-start;
         justify-content: flex-start;
     }
 
-    .rightBottomComponent .legalSection{
+    .rightBottomComponent .legalSection {
         transition: width 0.5s ease-in-out, align-items 0.5s ease-in-out;
         width: 60%;
         align-items: flex-start;
         justify-content: flex-start;
     }
 
-    .leftTopComponent{
+    .leftTopComponent {
         width: 100%;
         height: 10rem;
     }
 
-    .leftTopSocials{
+    .leftTopSocials {
         margin: 1rem 0;
     }
 }

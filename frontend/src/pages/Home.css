@@ -1,10 +1,10 @@
-.Home{
+.Home {
     width: 100%;
     max-width: 100vw;
     box-sizing: border-box;
 }
 
-.welcomeSection{
+.welcomeSection {
     width: 100%;
     height: 50rem;
     box-sizing: border-box;
@@ -19,7 +19,7 @@
     transition: all 0.5s ease-in-out;
 }
 
-.welcomeSection .welcomeText{
+.welcomeSection .welcomeText {
     width: 50rem;
     box-sizing: border-box;
     padding: 5rem 2.5rem;
@@ -28,7 +28,7 @@
     flex-direction: column;
 }
 
-.welcomeSection .welcomeText h2{
+.welcomeSection .welcomeText h2 {
     font-weight: 400;
     font-size: 54px;
     align-self: center;
@@ -36,86 +36,86 @@
     margin-bottom: 1rem;
 }
 
-.welcomeSection .welcomeText h3{
+.welcomeSection .welcomeText h3 {
     font-weight: 300;
     font-size: 28px;
     transition: all 0.5s ease-in-out;
 }
 
-.welcomeSection .welcomeText p{
+.welcomeSection .welcomeText p {
     font-weight: 300;
     font-size: 18px;
 }
 
-.welcomeSection .welcomeText p span{
+.welcomeSection .welcomeText p span {
     transition: all 0.5s ease-in-out;
 }
 
-@media(max-width: 900px){
-    .welcomeSection .welcomeText{
+@media(max-width: 900px) {
+    .welcomeSection .welcomeText {
         width: 45rem;
         transition: all 0.5s ease-in-out;
     }
 }
 
-@media(max-width: 800px){
-    .welcomeSection .welcomeText{
+@media(max-width: 800px) {
+    .welcomeSection .welcomeText {
         width: 40rem;
         transition: all 0.5s ease-in-out;
     }
 }
 
-@media(max-width: 650px){
-    .welcomeSection .welcomeText{
+@media(max-width: 650px) {
+    .welcomeSection .welcomeText {
         width: 35rem;
         padding: 4rem 2rem;
         transition: all 0.5s ease-in-out;
     }
 
-    .welcomeSection .welcomeText h3{
+    .welcomeSection .welcomeText h3 {
         font-size: 26px;
         transition: all 0.5s ease-in-out;
     }
 
-    .welcomeSection .welcomeText h2{
+    .welcomeSection .welcomeText h2 {
         font-size: 45px;
         transition: all 0.5s ease-in-out;
     }
 
-    .welcomeSection .welcomeText p span{
+    .welcomeSection .welcomeText p span {
         display: none;
         transition: all 0.5s ease-in-out;
     }
 }
 
-.aboutSection{
+.aboutSection {
     width: 100%;
     box-sizing: border-box;
 }
 
-.aboutSubSection{
+.aboutSubSection {
     width: 100%;
     height: 50rem;
     box-sizing: border-box;
     display: flex;
 }
 
-#aS1{
+#aS1 {
     flex-direction: row;
     transition: all 0.5s ease-in-out;
 }
 
-#aS2{
+#aS2 {
     flex-direction: row-reverse;
     transition: all 0.5s ease-in-out;
 }
 
-#aS3{
+#aS3 {
     flex-direction: row;
     transition: all 0.5s ease-in-out;
 }
 
-.aboutSubSectionText{
+.aboutSubSectionText {
     background: #FBF8EF;
     height: 100%;
     width: 40rem;
@@ -127,16 +127,16 @@
     transition: all 0.5s ease-in-out;
 }
 
-#aS2 .aboutSubSectionText{
+#aS2 .aboutSubSectionText {
     align-items: flex-end;
 }
 
-.aboutSubSectionText h2{
+.aboutSubSectionText h2 {
     font-size: 42px;
     font-weight: 400;
 }
 
-.aboutSubSectionText p{
+.aboutSubSectionText p {
     font-size: 20px;
     font-weight: 300;
     padding: 2rem;
@@ -146,49 +146,49 @@
     transition: all 0.5s ease-in-out;
 }
 
-.aboutSubSectionText p span{
+.aboutSubSectionText p span {
     font-weight: 400;
 }
 
-#aS2 .aboutSubSectionText h2{
+#aS2 .aboutSubSectionText h2 {
     text-align: end;
 }
 
-.aboutSubSectionText a{
+.aboutSubSectionText a {
     text-decoration: none;
     color: #577564;
     font-weight: 400;
 }
 
-.aboutSubSectionPic{
+.aboutSubSectionPic {
     width: 60%;
     height: 100%;
     transition: all 0.5s ease-in-out;
 }
 
-#aSSP1{
+#aSSP1 {
     background: url('../../public/images/about/Hydroponics.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-#aSSP2{
+#aSSP2 {
     background: url('../../public/images/about/Farming_with_IoT.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-#aSSP3{
+#aSSP3 {
     background: url('../../public/images/about/Sustainable_&_Automated_Growth.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-@media(max-width: 1000px){
-    #aS1{
+@media(max-width: 1000px) {
+    #aS1 {
         background: url('../../public/images/about/Hydroponics.jpg');
         background-repeat: no-repeat;
         background-position: center;
@@ -196,7 +196,7 @@
         transition: all 0.5s ease-in-out;
     }
 
-    #aS2{
+    #aS2 {
         background: url('../../public/images/about/Farming_with_IoT.jpg');
         background-repeat: no-repeat;
         background-position: center;
@@ -204,7 +204,7 @@
         transition: all 0.5s ease-in-out;
     }
 
-    #aS3{
+    #aS3 {
         background: url('../../public/images/about/Sustainable_&_Automated_Growth.jpg');
         background-repeat: no-repeat;
         background-position: center;
@@ -212,7 +212,7 @@
         transition: all 0.5s ease-in-out;
     }
 
-    .aboutSubSectionText{
+    .aboutSubSectionText {
         width: 35rem;
         height: fit-content;
         margin: 5rem;
@@ -220,34 +220,34 @@
         transition: all 0.5s ease-in-out;
     }
 
-    .aboutSubSectionPic{
+    .aboutSubSectionPic {
         display: none;
         transition: all 0.5s ease-in-out;
     }
 
 }
 
-@media(max-width: 650px){
-    .aboutSubSectionText{
+@media(max-width: 650px) {
+    .aboutSubSectionText {
         margin: 4rem 3rem;
         transition: all 0.5s ease-in-out;
     }
 }
 
-@media(max-width: 400px){
-    .aboutSubSectionText{
+@media(max-width: 400px) {
+    .aboutSubSectionText {
         margin: 3rem 2rem;
         padding: 3rem 2rem;
         transition: all 0.5s ease-in-out;
     }
 
-    .aboutSubSectionText p{
+    .aboutSubSectionText p {
         padding: 2rem 0rem;
         transition: all 0.5s ease-in-out;
     }
 }
 
-.plantInfoSection{
+.plantInfoSection {
     width: 100%;
     min-height: 60rem;
     height: auto;
@@ -264,7 +264,7 @@
     align-items: center;
 }
 
-.plantInfoText{
+.plantInfoText {
     width: 70rem;
     display: flex;
     flex-direction: column;
@@ -275,18 +275,18 @@
     transition: all 0.5s ease-in-out;
 }
 
-.plantInfoText h2{
+.plantInfoText h2 {
     font-weight: 400;
     font-size: 42px;
 }
 
-.plantInfoText p{
+.plantInfoText p {
     margin: 2rem 0rem;
     font-weight: 300;
     font-size: 18px;
 }
 
-.plantInfoCards{
+.plantInfoCards {
     padding: 1rem;
     width: 70rem;
     margin-bottom: 5rem;
@@ -297,36 +297,39 @@
     transition: all 0.5s ease-in-out;
 }
 
-.plantInfoCards a{
+.plantInfoCards a {
     text-decoration: none;
 }
 
-@media(max-width: 1200px){
-    .plantInfoText{
+@media(max-width: 1200px) {
+    .plantInfoText {
         width: 60rem;
     }
-    .plantInfoCards{
+
+    .plantInfoCards {
         width: 60rem;
     }
 }
 
-@media(max-width: 1100px){
-    .plantInfoText{
+@media(max-width: 1100px) {
+    .plantInfoText {
         width: 50rem;
         transition: all 0.5s ease-in-out;
     }
-    .plantInfoCards{
+
+    .plantInfoCards {
         width: 50rem;
         transition: all 0.5s ease-in-out;
     }
 }
 
-@media(max-width: 950px){
-    .plantInfoText{
+@media(max-width: 950px) {
+    .plantInfoText {
         width: 40rem;
         transition: all 0.5s ease-in-out;
     }
-    .plantInfoCards{
+
+    .plantInfoCards {
         width: 40rem;
         flex-direction: column;
         align-items: center;
@@ -335,25 +338,25 @@
     }
 }
 
-@media(max-width: 800px){
-    .plantInfoText{
+@media(max-width: 800px) {
+    .plantInfoText {
         width: 30rem;
         transition: all 0.5s ease-in-out;
     }
 
-    .plantInfoCards{
+    .plantInfoCards {
         width: 30rem;
         transition: all 0.5s ease-in-out;
     }
 }
 
-@media(max-width: 650px){
-    .plantInfoText{
+@media(max-width: 650px) {
+    .plantInfoText {
         width: 25rem;
         transition: all 0.5s ease-in-out;
     }
 
-    .plantInfoCards{
+    .plantInfoCards {
         width: 25rem;
         transition: all 0.5s ease-in-out;
     }

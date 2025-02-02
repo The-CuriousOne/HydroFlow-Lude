@@ -1,4 +1,4 @@
-.license{
+.license {
     width: 100%;
     max-width: 100vw;
     padding: 5rem;
@@ -6,13 +6,13 @@
     background: url('../../public/images/license.jpg');
 }
 
-.licenseAgreement{
+.licenseAgreement {
     background: rgba(255, 255, 255, 0.75);
     padding: 7rem 5rem;
     box-sizing: border-box;
 }
 
-.licenseHead{
+.licenseHead {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -20,122 +20,122 @@
     border-top: 2px solid rgb(0, 0, 0, 0.5);
 }
 
-.licenseHead h2{
+.licenseHead h2 {
     align-self: center;
     font-weight: 500;
     font-size: 48px;
     padding: 2.5rem 0rem;
 }
 
-.licenseHead h3{
+.licenseHead h3 {
     margin: 0.25rem 0rem;
     font-weight: 500;
 }
 
-.licenseHead p{
+.licenseHead p {
     margin: 0.25rem 0rem;
     font-weight: 300;
 }
 
-.licenseHead h4{
+.licenseHead h4 {
     margin: 0.25rem 0rem;
     font-weight: 500;
 }
 
-.projectDetail{
+.projectDetail {
     padding: 1.5rem;
     font-size: 18px;
     box-sizing: border-box;
 }
 
-.licenseContent{
+.licenseContent {
     padding: 0rem 2rem;
     hyphens: auto;
 }
 
-.licenseComponent{
+.licenseComponent {
     padding: 2.5rem;
     border-bottom: 2px solid rgb(0, 0, 0, 0.5);
 }
 
-.licenseComponent h3{
+.licenseComponent h3 {
     font-weight: 500;
     font-size: 24px;
 }
 
-.licenseComponent p{
+.licenseComponent p {
     margin: 1rem 0rem;
     font-weight: 300;
     font-size: 18px;
 }
 
-.licenseComponent ul{
+.licenseComponent ul {
     margin: 1rem 2rem;
     list-style: disc;
     font-size: 18px;
 }
 
-.licenseComponent ul li{
+.licenseComponent ul li {
     margin: 0.5rem 0rem;
 }
 
-.licenseComponent blockquote{
+.licenseComponent blockquote {
     margin: 1rem 0rem;
     padding: 0rem 2rem;
     border-left: 5px solid #122A2C;
     border-radius: 10px;
 }
 
-.italics{
+.italics {
     font-style: italic;
 }
 
-.bold{
+.bold {
     font-weight: 400;
 }
 
-@media(max-width: 900px){
-    .license{
+@media(max-width: 900px) {
+    .license {
         padding: 4rem;
     }
 
-    .licenseAgreement{
+    .licenseAgreement {
         padding: 5rem 4rem;
     }
 
-    .licenseContent{
+    .licenseContent {
         padding: 0rem;
     }
 
-    .licenseComponent{
+    .licenseComponent {
         padding: 2.5rem 2rem;
     }
 }
 
-@media(max-width: 700px){
-    .licenseAgreement{
+@media(max-width: 700px) {
+    .licenseAgreement {
         padding: 4rem 3rem;
     }
 
-    .licenseComponent{
+    .licenseComponent {
         padding: 2.5rem 1rem;
     }
 }
 
-@media(max-width: 500px){
-    .license{
+@media(max-width: 500px) {
+    .license {
         padding: 1rem;
     }
 
-    .licenseAgreement{
+    .licenseAgreement {
         padding: 2.5rem 1.5rem;
     }
 
-    .licenseHead h2{
+    .licenseHead h2 {
         text-align: center;
     }
 
-    .licenseComponent ul{
+    .licenseComponent ul {
         margin: 1rem;
     }
 }

@@ -20,7 +20,9 @@ const Navbar = ({ show }) => {
   return (
     <div className={`Navbar ${!show ? "hidden" : ""}`}>
       <div className="leftComponent">
-        <Link to='/'><h3>HydroFlow Lude</h3></Link>
+        <Link to="/">
+          <h3>HydroFlow Lude</h3>
+        </Link>
       </div>
 
       <div className="rightComponent">
@@ -44,26 +46,38 @@ const Navbar = ({ show }) => {
             </Link>
           </li>
         </ul>
-        <IoMenu className="menuIcon" onClick={toggleMobileMenu}/>
-        <ul className={`navbarMobileMenu ${isMobileMenuOpen ? "open" : ""} ${!show ? "hidden" : ""}`}>
-          <IoClose className="closeIcon" onClick={toggleMobileMenu}/>
+        <IoMenu className="menuIcon" onClick={toggleMobileMenu} />
+        <ul
+          className={`navbarMobileMenu ${isMobileMenuOpen ? "open" : ""} ${
+            !show ? "hidden" : ""
+          }`}
+        >
+          <IoClose className="closeIcon" onClick={toggleMobileMenu} />
           <li className="userInfoListItemMobile">
-            <Link to='/test' onClick={toggleMobileMenu}>
+            <Link to="/test" onClick={toggleMobileMenu}>
               <img src="/images/navbar/profile-user.png" alt="Profile" />
               <div className="userStausMobile">User Info</div>
             </Link>
           </li>
           <li>
-            <Link to='/' onClick={toggleMobileMenu}>Home</Link>
+            <Link to="/" onClick={toggleMobileMenu}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to='/test' onClick={toggleMobileMenu}>Track</Link>
+            <Link to="/test" onClick={toggleMobileMenu}>
+              Track
+            </Link>
           </li>
           <li>
-            <Link to='/' onClick={toggleMobileMenu}>About</Link>
+            <Link to="/" onClick={toggleMobileMenu}>
+              About
+            </Link>
           </li>
           <li>
-            <Link to='/' onClick={toggleMobileMenu}>Contact Us</Link>
+            <Link to="/" onClick={toggleMobileMenu}>
+              Contact Us
+            </Link>
           </li>
         </ul>
       </div>
