@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { SessionProvider } from "next-auth/react";
 import Navbar from "@/components/Navbar";
 import ScrollToTop from "@/components/ScrollToTop";
 import Footer from "@/components/Footer";
@@ -53,13 +54,13 @@ export default function ClientLayout({ children }) {
   }, [handleScroll]);
 
   return (
-    <>
+    <SessionProvider>
       <Navbar show={showNavbar} />
       <ScrollToTop/>
       <div className="mt-[6.5rem]">
         {children}
       </div>
       <Footer/>
-    </>
+    </SessionProvider>
   );
 }

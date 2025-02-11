@@ -4,31 +4,17 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { IoMenu, IoClose } from "react-icons/io5";
+import { useSession } from "next-auth/react";
 
 const Navbar = ({ show }) => {
-  const [user, setUser] = useState(null);
+  const { data: session } = useSession();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  // Load user data from localStorage on mount
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const storedUser = localStorage.getItem("user");
-      if (storedUser && storedUser !== "undefined") {
-        try {
-          const parsedUser = JSON.parse(storedUser);
-          setUser(parsedUser);
-        } catch (error) {
-          console.error("Failed to parse stored user:", error);
-          setUser(null);
-        }
-      }
-    }
-  }, []);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  // Close the mobile menu when 'show' prop changes
   useEffect(() => {
     if (!show) {
       setMobileMenuOpen(false);
@@ -73,16 +59,29 @@ const Navbar = ({ show }) => {
             </Link>
           </li>
           <li className="flex items-center">
-            <Link href={user ? "/sign_up" : "/sign_up"} className="flex items-center">
-              <Image
-                src="/images/navbar/profile_user.png"
-                alt="Profile"
-                width={30}
-                height={30}
-                className="mr-3 w-8 h-8"
-              />
-              {user ? <span>{user.username}</span> : <span>Sign In</span>}
-            </Link>
+            {session ? (
+              <Link href="/profile" className="flex items-center">
+                <Image
+                  src="/images/navbar/profile_user.png"
+                  alt="Profile"
+                  width={30}
+                  height={30}
+                  className="mr-3 w-8 h-8"
+                />
+                <span>{session.user.username}</span>
+              </Link>
+            ) : (
+              <Link href="/sign_up" className="flex items-center">
+                <Image
+                  src="/images/navbar/profile_user.png"
+                  alt="Profile"
+                  width={30}
+                  height={30}
+                  className="mr-3 w-8 h-8"
+                />
+                <span>Sign Up</span>
+              </Link>
+            )}
           </li>
         </ul>
 
@@ -103,20 +102,37 @@ const Navbar = ({ show }) => {
             onClick={toggleMobileMenu}
           />
           <li className="w-full flex flex-col items-center justify-center h-[15rem]">
-            <Link
-              href={user ? "/sign_up" : "/sign_up"}
-              onClick={toggleMobileMenu}
-              className="flex flex-col items-center"
-            >
-              <Image
-                src="/images/navbar/profile_user.png"
-                alt="Profile"
-                width={50}
-                height={50}
-                className="w-16 h-16 my-8"
-              />
-              <span>{user ? user.username : "Sign In"}</span>
-            </Link>
+            {session ? (
+              <Link
+                href="/profile"
+                onClick={toggleMobileMenu}
+                className="flex flex-col items-center"
+              >
+                <Image
+                  src="/images/navbar/profile_user.png"
+                  alt="Profile"
+                  width={50}
+                  height={50}
+                  className="w-16 h-16 my-8"
+                />
+                <span>{session.user.username}</span>
+              </Link>
+            ) : (
+              <Link
+                href="/sign_up"
+                onClick={toggleMobileMenu}
+                className="flex flex-col items-center"
+              >
+                <Image
+                  src="/images/navbar/profile_user.png"
+                  alt="Profile"
+                  width={50}
+                  height={50}
+                  className="w-16 h-16 my-8"
+                />
+                <span>Sign Up</span>
+              </Link>
+            )}
           </li>
           <li className="w-full h-16 flex justify-end border-b border-gray-600">
             <Link

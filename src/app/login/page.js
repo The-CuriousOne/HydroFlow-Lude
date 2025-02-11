@@ -3,6 +3,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import { signIn } from "next-auth/react";
 
 export default function Page() {
   const router = useRouter();
@@ -22,35 +23,29 @@ export default function Page() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Handle form submission
+  // Handle form submission using NextAuth signIn
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setMessage(null);
 
-    try {
-      // Call the login API
-      const res = await fetch("/api/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-      const data = await res.json();
+    // Call NextAuth's signIn function with "credentials" provider
+    const result = await signIn("credentials", {
+      redirect: false, // we handle redirection manually
+      username: formData.username,
+      password: formData.password,
+    });
 
-      if (!res.ok) {
-        setMessage(data.error || "Login failed. Please try again.");
-      } else {
-        setMessage("Login successful!");
-        localStorage.setItem("user", JSON.stringify(data.user));
-        setTimeout(() => {
-          router.push("/");
-        }, 1000);
-      }
-    } catch (error) {
-      setMessage("Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
+    if (result.error) {
+      setMessage(result.error || "Login failed. Please try again.");
+    } else {
+      setMessage("Login successful!");
+      // Optionally, you can refresh session data here or redirect immediately
+      setTimeout(() => {
+        router.push("/");
+      }, 1000);
     }
+    setLoading(false);
   };
 
   return (
