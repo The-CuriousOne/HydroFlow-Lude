@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import clientPromise from "@/lib/mongodb";
 import bcrypt from "bcryptjs";
 
@@ -34,7 +36,7 @@ export async function POST(request) {
 
     const client = await clientPromise;
     // Explicitly use your database name:
-    const db = client.db("HydroFlowLude");
+    const db = await client.db("HydroFlowLude");
 
     // Check if a user with the same email exists
     const existingUser = await db.collection("users").findOne({ email });

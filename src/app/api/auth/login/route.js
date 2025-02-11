@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import clientPromise from "@/lib/mongodb";
 import bcrypt from "bcryptjs";
 
@@ -21,7 +23,7 @@ export async function POST(request) {
     }
 
     const client = await clientPromise;
-    const db = client.db("HydroFlowLude");
+    const db = await client.db("HydroFlowLude");
 
     // Find the user by username
     const user = await db.collection("users").findOne({ username });
