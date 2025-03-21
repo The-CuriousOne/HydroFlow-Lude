@@ -75,7 +75,7 @@ export default function Page() {
                 >
                     Log Out
                 </button>
-            </div>
+            </div> 
         </div>
     );
 }
