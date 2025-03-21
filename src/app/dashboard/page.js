@@ -21,7 +21,6 @@ export default function Dashboard() {
             try {
                 
                 const username = session.user.username;
-                console.log("Retrieved username from localStorage:", username);
 
                 if (!username) {
                     console.error("No username found in localStorage");
