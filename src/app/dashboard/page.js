@@ -8,8 +8,10 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import PlantInfoCard from "@/components/PlantInfoCard";
 import "./swiper-custom.css"; 
+import { useSession } from "next-auth/react";
 
 export default function Dashboard() {
+    const { data: session } = useSession();
     const [plantData, setPlantData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -17,7 +19,8 @@ export default function Dashboard() {
     useEffect(() => {
         async function fetchPlants() {
             try {
-                const username = localStorage.getItem("username"); // Changed to username
+                
+                const username = session.user.username;
                 console.log("Retrieved username from localStorage:", username);
 
                 if (!username) {
