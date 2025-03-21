@@ -1,0 +1,28 @@
+/* Change the color of navigation arrows */
+/* Change the color and size of navigation arrows */
+.swiper-button-prev,
+.swiper-button-next {
+    color: rgba(0, 0, 0, 0.5) !important;
+    font-size: 2rem !important; /* Increase the size */
+    font-weight: bold; /* Make the arrows thicker */
+    width: 50px !important; /* Increase width */
+    height: 50px !important; /* Increase height */
+}
+
+/* Customize the arrow icons */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 3rem !important; /* Increase arrow size */
+    font-weight: bold !important; /* Make it thicker */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Optional shadow effect */
+}
+
+/* Change the color of pagination dots */
+.swiper-pagination-bullet {
+    background: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Change the active pagination dot color */
+.swiper-pagination-bullet-active {
+    background: rgba(0, 0, 0, 0.8) !important;
+}

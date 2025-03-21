@@ -39,6 +39,7 @@ export default function Page() {
     if (result.error) {
       setMessage(result.error || "Login failed. Please try again.");
     } else {
+      localStorage.setItem("username", formData.username)
       setMessage("Login successful!");
       // Optionally, you can refresh session data here or redirect immediately
       setTimeout(() => {

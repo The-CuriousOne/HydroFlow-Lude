@@ -11,7 +11,7 @@ export default function Page() {
         <div>
             <button
                 onClick={handleLogout}
-                className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+                className="w-full min-h-[55rem] max-w-[100vw] p-[5rem] box-border bg-[url('/images/dashboardBackground.jpg')] text-black"
             >
                 Log Out
             </button>
