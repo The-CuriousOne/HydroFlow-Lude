@@ -84,6 +84,8 @@ export default function Dashboard() {
                                 pH={plant.pH}
                                 tds={plant.tds}
                                 temperature={plant.temperature}
+                                water={plant.water}
+                                humidity={plant.humidity}
                             />
                         </div>
                     </SwiperSlide>

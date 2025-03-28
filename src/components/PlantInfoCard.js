@@ -2,7 +2,7 @@
 
 import React from "react";
 
-const PlantInfoCard = ({ plantName, pH, tds, temperature }) => {
+const PlantInfoCard = ({ plantName, pH, tds, temperature, water, humidity }) => {
   const getBarColor = (value, min, max) => {
     return value >= min && value <= max ? "#4CAF50" : "#E63946";
   };
@@ -54,6 +54,36 @@ const PlantInfoCard = ({ plantName, pH, tds, temperature }) => {
               style={{
                 width: `${(temperature / 50) * 100}%`,
                 backgroundColor: getBarColor(temperature, 18, 24),
+              }}
+            ></div>
+          </div>
+        </div>
+        <div className="py-1">
+          <div className="text-[18px] font-normal">
+            Water (%) Levels :{" "}
+            <span className="font-light">{water}%</span>
+          </div>
+          <div className="w-full h-[0.4rem] bg-[#ddd] border-[0.5px] border-solid border-[rgba(0,0,0,0.2)] rounded-[5px] overflow-hidden mt-[4px]">
+            <div
+              className="h-full transition-[width] duration-500 ease-in-out"
+              style={{
+                width: `${(water / 100) * 100}%`,
+                backgroundColor: getBarColor(water, 50, 80),
+              }}
+            ></div>
+          </div>
+        </div>
+        <div className="py-1">
+          <div className="text-[18px] font-normal">
+            Humidity (%) Levels :{" "}
+            <span className="font-light">{humidity}%</span>
+          </div>
+          <div className="w-full h-[0.4rem] bg-[#ddd] border-[0.5px] border-solid border-[rgba(0,0,0,0.2)] rounded-[5px] overflow-hidden mt-[4px]">
+            <div
+              className="h-full transition-[width] duration-500 ease-in-out"
+              style={{
+                width: `${(humidity / 100) * 100}%`,
+                backgroundColor: getBarColor(humidity, 50, 60),
               }}
             ></div>
           </div>
