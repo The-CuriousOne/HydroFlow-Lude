@@ -22,7 +22,7 @@ export async function POST(req) {
     }
 
     // ✅ Use correct ObjectId
-    const userID = new ObjectId("67aa3b55294b0f05a5c181c1");
+    const userID = new ObjectId("67aa3b55294b0f05a5c181c2");
 
     // ✅ Build filter and update objects
     const filter = { userID };
