@@ -1,15 +1,16 @@
 import { NextResponse } from "next/server";
-import clientPromise from "@/lib/mongodb"; // Assuming this is your MongoDB client file
+import { ObjectId } from "mongodb";
+import clientPromise from "@/lib/mongodb"; // Your MongoDB client setup
 
 export async function POST(req) {
   try {
     const client = await clientPromise;
-    const db = client.db("HydroFlowLude"); // Connect to the default database in your cluster
-    const plantDataCollection = db.collection("plantData"); // Ensure collection name is correct
+    const db = client.db("HydroFlowLude");
+    const plantDataCollection = db.collection("plantData");
 
     const body = await req.json();
 
-    // Validate incoming data (optional but recommended)
+    // ✅ Validate incoming data
     if (
       typeof body.tds !== "number" ||
       typeof body.ph !== "number" ||
@@ -20,13 +21,28 @@ export async function POST(req) {
       return NextResponse.json({ error: "Invalid data format" }, { status: 400 });
     }
 
-    // Insert data into MongoDB
-    await plantDataCollection.insertOne({
-      ...body,
-      timestamp: new Date(),
-    });
+    // ✅ Use correct ObjectId
+    const userID = new ObjectId("67aa3b55294b0f05a5c181c1");
 
-    return NextResponse.json({ message: "Data saved successfully" }, { status: 201 });
+    // ✅ Build filter and update objects
+    const filter = { userID };
+    const update = {
+      $set: {
+        userID, // ensure it's always included
+        ...body,
+        timestamp: new Date(),
+      },
+    };
+    const options = { upsert: true };
+
+    // ✅ Upsert: update if exists, insert otherwise
+    const result = await plantDataCollection.updateOne(filter, update, options);
+
+    if (result.upsertedCount > 0) {
+      return NextResponse.json({ message: "New record created successfully" }, { status: 201 });
+    } else {
+      return NextResponse.json({ message: "Record updated successfully" }, { status: 200 });
+    }
   } catch (error) {
     console.error("Error saving data:", error);
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
