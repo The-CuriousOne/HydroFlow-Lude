@@ -7,11 +7,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import PlantInfoCard from "@/components/PlantInfoCard";
-import "./swiper-custom.css"; 
-import { useSession } from "next-auth/react";
+import "./swiper-custom.css";
+// import { useSession } from "next-auth/react";
 
 export default function Dashboard() {
-    const { data: session } = useSession();
+    // ✅ Uncomment below lines to use session-based fetching later
+    // const { data: session } = useSession();
+    
     const [plantData, setPlantData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -19,11 +21,12 @@ export default function Dashboard() {
     useEffect(() => {
         async function fetchPlants() {
             try {
-                
-                const username = session.user.username;
+                // 🔒 Dynamic session-based POST logic (commented out for now)
+                /*
+                const username = session?.user?.name || session?.user?.email;
 
                 if (!username) {
-                    console.error("No username found in localStorage");
+                    console.error("No username found.");
                     setError("No username found.");
                     setLoading(false);
                     return;
@@ -34,7 +37,16 @@ export default function Dashboard() {
                     headers: {
                         "Content-Type": "application/json",
                     },
-                    body: JSON.stringify({ username }), 
+                    body: JSON.stringify({ username }),
+                });
+                */
+
+                // ✅ Static logic using GET
+                const response = await fetch("/api/plants", {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
                 });
 
                 const data = await response.json();
@@ -44,7 +56,7 @@ export default function Dashboard() {
                     setPlantData(data.plants);
                 } else {
                     console.error("Error fetching plant data:", data.error);
-                    setError(data.error);
+                    setError(data.error || "Unknown error");
                 }
             } catch (error) {
                 console.error("Error fetching plant data:", error);
@@ -57,15 +69,25 @@ export default function Dashboard() {
         fetchPlants();
     }, []);
 
-    if (loading) return <div className="w-full min-h-[55rem] max-w-[100vw] p-[5rem] box-border bg-[url('/images/dashboardBackground.jpg')] text-black">Loading plant data...</div>;
-    if (error) return <div className="text-red-500">Error: {error}</div>;
+    if (loading)
+        return (
+            <div className="w-full min-h-[55rem] max-w-[100vw] p-[5rem] box-border bg-[url('/images/dashboardBackground.jpg')] text-black">
+                Loading plant data...
+            </div>
+        );
+    if (error)
+        return (
+            <div className="text-red-500">
+                Error: {error}
+            </div>
+        );
 
     return (
         <div className="w-full min-h-[55rem] max-w-[100vw] p-[5rem] box-border bg-[url('/images/dashboardBackground.jpg')] text-black">
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
                 spaceBetween={20}
-                slidesPerView={Math.min(plantData.length, 3)} 
+                slidesPerView={Math.min(plantData.length, 3)}
                 navigation
                 pagination={{ clickable: true }}
                 loop={true}
@@ -77,14 +99,14 @@ export default function Dashboard() {
                 className="w-full h-[45rem] px-[5rem] py-[10rem] flex justify-center items-center"
             >
                 {plantData.map((plant, index) => (
-                    <SwiperSlide key={index} className="flex justify-center items-center h-full"> 
+                    <SwiperSlide key={index} className="flex justify-center items-center h-full">
                         <div className="flex justify-center items-center h-full">
-                            <PlantInfoCard 
+                            <PlantInfoCard
                                 plantName={plant.plantName}
-                                pH={plant.pH}
+                                pH={plant.ph}
                                 tds={plant.tds}
                                 temperature={plant.temperature}
-                                water={plant.water}
+                                water={plant.waterLevel}
                                 humidity={plant.humidity}
                             />
                         </div>

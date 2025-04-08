@@ -1,49 +1,26 @@
-import { ObjectId } from "mongodb";
+import { NextResponse } from "next/server";
 import clientPromise from "@/lib/mongodb";
+import { ObjectId } from "mongodb";
 
-export async function POST(req) {
-    try {
-        const { username } = await req.json();
-        if (!username) {
-            return new Response(
-                JSON.stringify({ error: "Missing username" }),
-                { status: 400, headers: { "Content-Type": "application/json" } }
-            );
-        }
+// GET: Fetch plant data
+export async function GET() {
+  try {
+    const client = await clientPromise;
+    const db = client.db("HydroFlowLude");
+    const plantDataCollection = db.collection("plantData");
 
-        const client = await clientPromise;
-        const db = client.db("HydroFlowLude");
+    // For now, fixed userID (replace with dynamic value later)
+    const userID = new ObjectId("67b211dbd470dba8e81014f6");
 
-        // Find user by username to get _id
-        const user = await db.collection("users").findOne({ username });
-        if (!user) {
-            return new Response(
-                JSON.stringify({ error: "User not found" }),
-                { status: 404, headers: { "Content-Type": "application/json" } }
-            );
-        }
+    const plantData = await plantDataCollection.findOne({ userID });
 
-        // Fetch plant data where userId matches
-        const plants = await db.collection("demoPlantData")
-            .find({ userId: new ObjectId(user._id) })
-            .toArray();
-
-        return new Response(
-            JSON.stringify({ plants }),
-            { status: 200, headers: { "Content-Type": "application/json" } }
-        );
-    } catch (error) {
-        return new Response(
-            JSON.stringify({ error: "Internal server error" }),
-            { status: 500, headers: { "Content-Type": "application/json" } }
-        );
+    if (!plantData) {
+      return NextResponse.json({ plants: [] }, { status: 200 });
     }
-}
 
-// Prevent GET requests
-export async function GET(req) {
-    return new Response(
-        JSON.stringify({ error: "Use POST instead" }),
-        { status: 405, headers: { "Content-Type": "application/json" } }
-    );
+    return NextResponse.json({ plants: [plantData] }, { status: 200 });
+  } catch (error) {
+    console.error("Error fetching plant data:", error);
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+  }
 }
